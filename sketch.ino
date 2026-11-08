@@ -8,7 +8,7 @@ OneWire oneWire(pino_sensor);
 DallasTemperature sensor(&oneWire);
 float prev_temp = 0.0;
 
-/* ---------- CORRENTE (potenciometro simula o INA219) ---------- */
+/* ---------- CORRENTE (potenciometro simula o SCT-013-030) ---------- */
 const int pino_pot = 34;              /* pino analogico do ESP32 */
 const float lim_corrente = 1000.0;    /* limite de corrente alta (mA) */
 float prev_corrente = 0.0;
@@ -42,7 +42,7 @@ void setup()
 
   Serial.println();
   Serial.println("Monitor de superaquecimento eletrico");
-  Serial.println("Temperatura (DS18B20) + Corrente (INA219 simulado)");
+  Serial.println("Temperatura (DS18B20) + Corrente (SCT-013-030 simulado)");
   Serial.println();
 
   Serial.print("Limite de temperatura: ");
